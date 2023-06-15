@@ -1,0 +1,31 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.nav-open{
+  @apply translate-y-0
+}
+
+.nav-open::after{
+  @apply content-[""] absolute top-0 left-0 w-[100vw] h-[100vh] bg-shade translate-y-[90px] md:hidden
+}
+
+#nav{
+  @apply md:translate-y-0 md:bg-transparent
+ }
+
+#close, #open {
+  @apply md:hidden
+}
+
+ul > li {
+  @apply md:text-white relative
+}
+
+ul > li::after {
+  @apply content-[''] absolute bottom-0 left-[50%] translate-x-[-50%] w-5 border-b-2 border-DarkGray md:border-white invisible
+}
+
+ul >li:hover::after {
+  @apply visible
+}
