@@ -588,6 +588,10 @@ video {
   justify-content: space-evenly;
 }
 
+.gap-4 {
+  gap: 1rem;
+}
+
 .bg-black {
   --tw-bg-opacity: 1;
   background-color: rgb(0 0 0 / var(--tw-bg-opacity));
@@ -657,7 +661,7 @@ video {
   }
 }
 
-@media (min-width: 768px) {
+@media (min-width: 960px) {
   .navbar {
     position: relative;
     width: auto;
@@ -697,7 +701,7 @@ video {
   }
 }
 
-@media (min-width: 768px) {
+@media (min-width: 960px) {
   .nav {
     position: relative;
     --tw-translate-y: 0px;
@@ -725,7 +729,7 @@ video {
   content: var(--tw-content);
 }
 
-@media (min-width: 768px) {
+@media (min-width: 960px) {
   .nav-open::after {
     display: none;
   }
@@ -739,7 +743,7 @@ ul > li {
   position: relative;
 }
 
-@media (min-width: 768px) {
+@media (min-width: 960px) {
   ul > li {
     --tw-text-opacity: 1;
     color: rgb(255 255 255 / var(--tw-text-opacity));
@@ -761,7 +765,7 @@ ul > li::after {
   content: var(--tw-content);
 }
 
-@media (min-width: 768px) {
+@media (min-width: 960px) {
   ul > li::after {
     --tw-border-opacity: 1;
     border-color: rgb(255 255 255 / var(--tw-border-opacity));
@@ -793,11 +797,11 @@ main > div > div > div > button {
   }
 }
 
-@media (min-width: 768px) {
+@media (min-width: 960px) {
   .text-container {
     margin: auto;
-    padding-left: 0.5rem;
-    padding-right: 0.5rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
   }
 }
 
@@ -817,7 +821,7 @@ main > div > div > div > button {
   }
 }
 
-@media (min-width: 768px) {
+@media (min-width: 960px) {
   .md\:mx-0 {
     margin-left: 0px;
     margin-right: 0px;
@@ -851,6 +855,41 @@ main > div > div > div > button {
     max-width: 520px;
   }
 
+  .md\:translate-x-\[8\.7em\] {
+    --tw-translate-x: 8.7em;
+    transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+  }
+
+  .md\:translate-x-\[8\.8em\] {
+    --tw-translate-x: 8.8em;
+    transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+  }
+
+  .md\:translate-x-\[9rem\] {
+    --tw-translate-x: 9rem;
+    transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+  }
+
+  .md\:translate-x-\[83rem\] {
+    --tw-translate-x: 83rem;
+    transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+  }
+
+  .md\:translate-x-\[8\.8rem\] {
+    --tw-translate-x: 8.8rem;
+    transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+  }
+
+  .md\:translate-x-\[8\.9rem\] {
+    --tw-translate-x: 8.9rem;
+    transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+  }
+
+  .md\:translate-x-\[144px\] {
+    --tw-translate-x: 144px;
+    transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+  }
+
   .md\:grid-cols-\[30\%_40\%_30\%\] {
     grid-template-columns: 30% 40% 30%;
   }
@@ -863,6 +902,11 @@ main > div > div > div > button {
     grid-template-rows: 2fr 1fr;
   }
 
+  .md\:px-2 {
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+  }
+
   .md\:py-0 {
     padding-top: 0px;
     padding-bottom: 0px;
@@ -871,6 +915,16 @@ main > div > div > div > button {
   .md\:py-4 {
     padding-top: 1rem;
     padding-bottom: 1rem;
+  }
+
+  .md\:px-3 {
+    padding-left: 0.75rem;
+    padding-right: 0.75rem;
+  }
+
+  .md\:px-\[10px\] {
+    padding-left: 10px;
+    padding-right: 10px;
   }
 
   .md\:text-2xl {

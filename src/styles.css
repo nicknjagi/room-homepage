@@ -40,7 +40,7 @@ main > div > div > div > button{
 }
 
 .text-container {
-  @apply px-4 md:px-2 py-16 md:m-auto xss:px-16
+  @apply px-4 xss:px-16 md:px-4 py-16 md:m-auto 
 }
 
 .image {
