@@ -12,7 +12,8 @@ module.exports = {
         leagueSpartan: ['League Spartan', 'sans-serif'],
       },
       screens: {
-        'xss': '480px'
+        'xss': '480px',/*extra small & small*/
+        'md' : '960px'
       }
     },
   },
