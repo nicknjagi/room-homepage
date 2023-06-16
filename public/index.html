@@ -13,13 +13,12 @@
   <title>Frontend Mentor | Room homepage</title>
 
 </head>
-<body class="font-leagueSpartan bg-blue-200">
+<body class="font-leagueSpartan ">
 
   <!-- navbar -->
-  <nav class="flex items-center fixed w-full">
-
-    <div class="flex justify-stretch items-center absolute md:relative top-0 left-0 z-10 w-full md:w-auto px-4 xss:px-16 md:pr-0 py-10">
-      <button id="open" class="">
+  <nav class="flex items-center fixed w-full z-10">
+    <div class="navbar">
+      <button id="open">
         <img src="./assets/images/icon-hamburger.svg" alt="menu icon">
       </button>
       <div class="w-20 md:w-32 mx-auto md:mx-0">
@@ -27,7 +26,7 @@
       </div>  
     </div>
 
-    <div id="nav" class=" flex gap-8 xss:gap-14 absolute md:relative top-0 left-0 px-4 py-8 xss:px-16 md:pl-0 w-full transition-[transform] duration-300 ease-out translate-y-[-100vh] bg-white z-10 lowercase font-semibold">
+    <div id="nav" class="nav">
       <button id="close" >
         <img src="./assets/images/icon-close.svg" alt="">
       </button>
@@ -41,8 +40,52 @@
   </nav>
 
   <!-- main -->
-  <main>
-    <!-- <h1>sfwsfvgegv</h1> -->
+  <main class="md:h-[100vh] md:grid md:grid-rows-[2fr_1fr]">
+    <!-- row one -->
+    <div class="md:grid md:grid-cols-[60vw_40vw]  ">
+      <!-- hero img -->
+      <div class="relative z-0 md:max-h-[65vh]">
+        <picture>
+          <source media="(min-width:600px)" srcset='./assets/images/desktop-image-hero-1.jpg'>
+          <source media="(max-width:600px)" srcset='./assets/images/mobile-image-hero-1.jpg'>
+          <img class="image" src="./assets/images/mobile-image-hero-1.jpg" alt="white chairs">
+        </picture>
+        <div class="flex w-fit bg-black absolute bottom-0 right-0 z-0">
+          <button><img src="./assets/images/icon-angle-left.svg" alt=""></button>
+          <button><img src="./assets/images/icon-angle-right.svg" alt=""></button>
+        </div>
+      </div>
+      <!-- intro text -->
+      <div class="text-container md:py-0 md:max-w-[460px]">
+        <h1 class="text-3xl md:text-5xl font-bold pb-4">Discover innovative ways to decorate</h1>    
+        <p class="text-DarkGray pb-8">
+          We provide unmatched quality, comfort, and style for property owners across the country.
+          Our experts combine form and function in bringing your vision to life. Create a room in your
+          own style with our collection and make your property a reflection of you and what you love.
+        </p> 
+        <a class="block uppercase tracking-[0.5rem] font-bold" href="#">Shop now <img class="inline-block" src="./assets/images/icon-arrow.svg" aria-hidden="true" alt="link icon"></a>
+      </div>
+    </div>
+
+    <!-- row two -->
+    <div class="md:h-[35vh] md:grid md:grid-cols-[30%_40%_30%]">
+      <div>
+        <img class="image" src="./assets/images/image-about-dark.jpg" alt="black chairs">
+      </div>
+      <div class="text-container md:py-4 md:max-w-[520px]">
+        <h2 class="uppercase font-bold tracking-widest text-xl md:text-2xl pb-4">About our furniture</h2>
+        <p class="text-DarkGray">
+          Our multifunctional collection blends design and function to suit your individual taste.
+          Make each room unique, or pick a cohesive theme that best express your interests and what
+          inspires you. Find the furniture pieces you need, from traditional to contemporary styles
+          or anything in between. Product specialists are available to help you create your dream space.
+        </p>
+      </div>
+      <div>
+        <img class="image" src="./assets/images/image-about-light.jpg" alt="white chair">
+      </div>
+    </div>
+
   </main>
 
   <script src="./script.js"></script>
