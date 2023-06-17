@@ -40,25 +40,25 @@
   </nav>
 
   <!-- main -->
-  <main class="md:h-[100vh] md:grid md:grid-rows-[2fr_1fr]">
+  <main class="md:h-[100vh] md:flex md:flex-col md:justify-stretch items-stretch">
     <!-- row one -->
-    <div class="md:grid md:grid-cols-[60vw_40vw]  ">
+    <div class="md:h-[65%] md:grid md:grid-cols-[60vw_40vw]  ">
       <!-- hero img -->
       <div class="relative z-0 md:max-h-[65vh]">
-        <picture>
+        <picture id="picture">
           <source media="(min-width:600px)" srcset='./assets/images/desktop-image-hero-1.jpg'>
           <source media="(max-width:600px)" srcset='./assets/images/mobile-image-hero-1.jpg'>
           <img class="image" src="./assets/images/mobile-image-hero-1.jpg" alt="white chairs">
         </picture>
         <div class="flex gap-4 w-fit bg-black absolute bottom-0 right-0 z-0 md:translate-x-[144px] md:px-[10px]">
-          <button><img src="./assets/images/icon-angle-left.svg" alt=""></button>
-          <button><img src="./assets/images/icon-angle-right.svg" alt=""></button>
+          <button id="prev"><img src="./assets/images/icon-angle-left.svg" alt=""></button>
+          <button id="next"><img src="./assets/images/icon-angle-right.svg" alt=""></button>
         </div>
       </div>
       <!-- intro text -->
       <div class="text-container md:py-0 md:max-w-[460px]">
-        <h1 class="text-3xl md:text-5xl font-bold pb-4">Discover innovative ways to decorate</h1>    
-        <p class="text-DarkGray pb-8">
+        <h1 id="heading" class="text-3xl md:text-5xl font-bold pb-4">Discover innovative ways to decorate</h1>    
+        <p id="intro-text" class="text-DarkGray pb-8">
           We provide unmatched quality, comfort, and style for property owners across the country.
           Our experts combine form and function in bringing your vision to life. Create a room in your
           own style with our collection and make your property a reflection of you and what you love.
@@ -68,7 +68,7 @@
     </div>
 
     <!-- row two -->
-    <div class="md:h-[35vh] md:grid md:grid-cols-[30%_40%_30%]">
+    <div class="md:h-[35%] md:grid md:items-stretch md:grid-cols-[30%_40%_30%]">
       <div>
         <img class="image" src="./assets/images/image-about-dark.jpg" alt="black chairs">
       </div>
