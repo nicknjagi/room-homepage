@@ -47,7 +47,7 @@ prev.addEventListener('click', ()=>{
 
   picture.innerHTML = `
     <source media="(min-width:600px)" srcset='./assets/images/desktop-${image}'>
-    <source media="(max-width:600px)" srcset='./assets/images/mobile-${image}.jpg'>
+    <source media="(max-width:600px)" srcset='./assets/images/mobile-${image}'>
     <img class="image" src="./assets/images/mobile-${image}" alt="${alt}">
   `
   head.textContent = `${heading}`
@@ -65,7 +65,7 @@ next.addEventListener('click', ()=>{
 
   picture.innerHTML = `
       <source media="(min-width:600px)" srcset='./assets/images/desktop-${image}'>
-      <source media="(max-width:600px)" srcset='./assets/images/mobile-${image}.jpg'>
+      <source media="(max-width:600px)" srcset='./assets/images/mobile-${image}'>
       <img class="image" src="./assets/images/mobile-${image}" alt="${alt}">
     `
   head.textContent = `${heading}`
