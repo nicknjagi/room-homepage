@@ -44,7 +44,7 @@ prev.addEventListener('click', ()=>{
     index--
   }
   const {image, heading,text,alt} = content[index]
-console.log(image, heading, text, alt)
+
   picture.innerHTML = `
     <source media="(min-width:600px)" srcset='./assets/images/desktop-${image}'>
     <source media="(max-width:600px)" srcset='./assets/images/mobile-${image}.jpg'>
@@ -62,7 +62,7 @@ next.addEventListener('click', ()=>{
     index++
   }
   const { image, heading, text, alt } = content[index]
-  console.log(image, heading, text, alt)
+
   picture.innerHTML = `
       <source media="(min-width:600px)" srcset='./assets/images/desktop-${image}'>
       <source media="(max-width:600px)" srcset='./assets/images/mobile-${image}.jpg'>
