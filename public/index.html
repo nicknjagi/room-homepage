@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -26,7 +26,7 @@
       </div>  
     </div>
 
-    <div id="nav" class="nav">
+    <div id="nav" class="nav nav-close">
       <button id="close" >
         <img src="./assets/images/icon-close.svg" alt="">
       </button>
@@ -42,33 +42,38 @@
   <!-- main -->
   <main class="md:h-[100vh] md:flex md:flex-col md:justify-stretch items-stretch">
     <!-- row one -->
-    <div class="md:h-[65%] md:grid md:grid-cols-[60vw_40vw]  ">
+    <div class="md:h-[65%] md:grid md:grid-cols-[60vw_40vw]  overflow-hidden">
       <!-- hero img -->
-      <div class="relative z-0 md:max-h-[65vh]">
-        <picture id="picture">
-          <source media="(min-width:600px)" srcset='./assets/images/desktop-image-hero-1.jpg'>
-          <source media="(max-width:600px)" srcset='./assets/images/mobile-image-hero-1.jpg'>
-          <img class="image" src="./assets/images/mobile-image-hero-1.jpg" alt="white chairs">
-        </picture>
-        <div class="flex gap-4 w-fit bg-black absolute bottom-0 right-0 z-0 md:translate-x-[144px] md:px-[10px]">
+      <div class="relative h-full w-full md:max-h-[65vh]">
+        <div id="container" class="picture h-full w-full">
+          <picture id="picture" class="image">
+            <source media="(min-width:600px)" srcset='./assets/images/desktop-image-hero-1.jpg'>
+            <source media="(max-width:600px)" srcset='./assets/images/mobile-image-hero-1.jpg'>
+            <img class="image" src="./assets/images/mobile-image-hero-1.jpg" alt="white chairs">
+          </picture>
+        </div>
+        <div class="flex gap-4 md:gap-0 w-fit bg-black absolute bottom-0 right-0 z-0 md:z-40 md:translate-x-[122px] lg:translate-x-[142px] lg:px-[10px]">
           <button id="prev"><img src="./assets/images/icon-angle-left.svg" alt=""></button>
           <button id="next"><img src="./assets/images/icon-angle-right.svg" alt=""></button>
         </div>
       </div>
+
       <!-- intro text -->
-      <div class="text-container md:py-0 md:max-w-[460px]">
-        <h1 id="heading" class="text-3xl md:text-5xl font-bold pb-4">Discover innovative ways to decorate</h1>    
-        <p id="intro-text" class="text-DarkGray pb-8">
-          We provide unmatched quality, comfort, and style for property owners across the country.
-          Our experts combine form and function in bringing your vision to life. Create a room in your
-          own style with our collection and make your property a reflection of you and what you love.
-        </p> 
-        <a class="block uppercase tracking-[0.5rem] font-bold" href="#">Shop now <img class="inline-block" src="./assets/images/icon-arrow.svg" aria-hidden="true" alt="link icon"></a>
+      <div class="bg-white h-full w-full grid place-content-center z-10 overflow-hidden">
+        <div class="text-container md:py-0 md:max-w-[460px]">
+          <h1 id="heading" class="text-3xl md:text-5xl font-bold pb-4">Discover innovative ways to decorate</h1>
+          <p id="intro-text" class="text-DarkGray pb-8">
+            We provide unmatched quality, comfort, and style for property owners across the country.
+            Our experts combine form and function in bringing your vision to life. Create a room in your
+            own style with our collection and make your property a reflection of you and what you love.
+          </p>
+          <a class="cta block uppercase tracking-[0.5rem] font-bold" href="#">Shop now <img class="inline-block" src="./assets/images/icon-arrow.svg" aria-hidden="true" alt="link icon"></a>
+        </div>
       </div>
     </div>
 
     <!-- row two -->
-    <div class="md:h-[35%] md:grid md:items-stretch md:grid-cols-[30%_40%_30%]">
+    <div class="md:h-[35%] md:grid md:grid-cols-[30%_40%_30%]">
       <div>
         <img class="image" src="./assets/images/image-about-dark.jpg" alt="black chairs">
       </div>
@@ -88,6 +93,7 @@
 
   </main>
 
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.0/gsap.min.js"></script>
   <script src="./script.js"></script>
 </body>
 </html>
