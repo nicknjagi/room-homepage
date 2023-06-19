@@ -1,12 +1,15 @@
 const openBtn = document.getElementById('open')
 const closeBtn = document.getElementById('close')
 const nav = document.querySelector('#nav')
+const navbar = document.querySelector('.navbar')
 const picture = document.querySelector('#picture')
+const container = document.querySelector('#container')
 const prev = document.querySelector('#prev')
 const next = document.querySelector('#next')
 const head = document.querySelector('#heading')
 const introText = document.querySelector('#intro-text')
 let index = 0
+
 
 const content = [
   {
@@ -29,7 +32,6 @@ const content = [
   },
 ]
 
-
 openBtn.addEventListener('click',()=>{
   nav.classList.toggle('nav-open')
 })
@@ -37,31 +39,17 @@ closeBtn.addEventListener('click',()=>{
   nav.classList.toggle('nav-open')
 })
 
-prev.addEventListener('click', ()=>{
-  if(index === 0) {
-    index = content.length - 1
-  } else {
-    index--
+window.addEventListener('scroll', ()=>{
+  const posY = window.scrollY
+  if(posY >= container.getBoundingClientRect().height-30){
+    navbar.classList.add('bg-blur')
+  }else {
+    navbar.classList.remove('bg-blur')
   }
-  const {image, heading,text,alt} = content[index]
-
-  picture.innerHTML = `
-    <source media="(min-width:600px)" srcset='./assets/images/desktop-${image}'>
-    <source media="(max-width:600px)" srcset='./assets/images/mobile-${image}'>
-    <img class="image" src="./assets/images/mobile-${image}" alt="${alt}">
-  `
-  head.textContent = `${heading}`
-  introText.textContent = `${text}`
-
 })
 
-next.addEventListener('click', ()=>{
-  if (index === content.length - 1) {
-    index = 0
-  } else {
-    index++
-  }
-  const { image, heading, text, alt } = content[index]
+function updatePage(i){
+  const { image, heading, text, alt } = content[i]
 
   picture.innerHTML = `
       <source media="(min-width:600px)" srcset='./assets/images/desktop-${image}'>
@@ -70,5 +58,83 @@ next.addEventListener('click', ()=>{
     `
   head.textContent = `${heading}`
   introText.textContent = `${text}`
+}
+
+prev.addEventListener('click', ()=>{
+  if(index === 0) {
+    index = content.length - 1
+  } else {
+    index--
+  }
+  updatePage(index)
+  // animation
+  gsap.from('.picture', {
+    x: '100vw',
+    duration: 1,
+    ease: 'power4.out',
+    opacity: 0.5,
+  })
+
+  const width = container.getBoundingClientRect().width
+
+  if(width > 600){
+    gsap.from('#heading, #intro-text, .cta', {
+      y: '-100%',
+      stagger: 0.2,
+      ease: 'power4.out',
+      delay: 0.1,
+      opacity: 0,
+      scale: 0,
+    })
+  } else {
+    gsap.from('#heading, #intro-text, .cta', {
+      x: '-100%',
+      stagger: 0.2,
+      ease: 'power4.out',
+      delay: 0.1,
+      opacity: 0,
+      scale: 0,
+    })
+  }
 })
+
+next.addEventListener('click', ()=>{
+  if (index === content.length - 1) {
+    index = 0
+  } else {
+    index++
+  }
+  updatePage(index)
+  // animation
+  gsap.from('.picture', { 
+    x: '-100vw',  
+    duration: 1, 
+    ease: 'power4.out',
+    opacity:0.5
+  })
+
+  const width = container.getBoundingClientRect().width
+
+  if(width > 600){
+    gsap.from('#heading, #intro-text, .cta', {
+      y: '-100%',
+      stagger: 0.2,
+      ease: 'power4.out',
+      delay:0.1,
+      opacity:0,
+      scale:0
+    })
+  } else {
+    gsap.from('#heading, #intro-text, .cta', {
+      x: '-100%',
+      stagger: 0.2,
+      ease: 'power4.out',
+      delay:0.1,
+      opacity:0,
+      scale:0
+    })
+  }
+})
+
+
 
