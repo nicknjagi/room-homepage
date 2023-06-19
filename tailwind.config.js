@@ -6,15 +6,15 @@ module.exports = {
       colors: {
         DarkGray: 'hsl(0, 0%, 63%)',
         VeryDarkGray: 'hsl(0, 0%, 27%)',
-        shade: 'rgba(0,0,0,0.2)'
+        shade: 'rgba(0,0,0,0.2)',
       },
       fontFamily: {
         leagueSpartan: ['League Spartan', 'sans-serif'],
       },
       screens: {
-        'xss': '480px',/*extra small & small*/
-        'md' : '960px'
-      }
+        xss: '480px' /*extra small & small*/,
+        md: '960px',
+      },
     },
   },
   plugins: [],
