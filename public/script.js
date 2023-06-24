@@ -60,45 +60,7 @@ function updatePage(i){
   introText.textContent = `${text}`
 }
 
-prev.addEventListener('click', ()=>{
-  if(index === 0) {
-    index = content.length - 1
-  } else {
-    index--
-  }
-  updatePage(index)
-  // animation
-  gsap.from('.picture', {
-    x: '100vw',
-    duration: 1,
-    ease: 'power4.out',
-    opacity: 0.5,
-  })
-
-  const width = container.getBoundingClientRect().width
-
-  if(width > 600){
-    gsap.from('#heading, #intro-text, .cta', {
-      y: '-100%',
-      stagger: 0.2,
-      ease: 'power4.out',
-      delay: 0.1,
-      opacity: 0,
-      scale: 0,
-    })
-  } else {
-    gsap.from('#heading, #intro-text, .cta', {
-      x: '-100%',
-      stagger: 0.2,
-      ease: 'power4.out',
-      delay: 0.1,
-      opacity: 0,
-      scale: 0,
-    })
-  }
-})
-
-next.addEventListener('click', ()=>{
+function slide(picX, othersX) {
   if (index === content.length - 1) {
     index = 0
   } else {
@@ -107,7 +69,7 @@ next.addEventListener('click', ()=>{
   updatePage(index)
   // animation
   gsap.from('.picture', { 
-    x: '-100vw',  
+    x: picX,  
     duration: 1, 
     ease: 'power4.out',
     opacity:0.5
@@ -115,26 +77,30 @@ next.addEventListener('click', ()=>{
 
   const width = container.getBoundingClientRect().width
 
-  if(width > 600){
+  if(width > 570){
     gsap.from('#heading, #intro-text, .cta', {
       y: '-100%',
       stagger: 0.2,
       ease: 'power4.out',
-      delay:0.1,
+      delay:0.5,
       opacity:0,
       scale:0
     })
   } else {
     gsap.from('#heading, #intro-text, .cta', {
-      x: '-100%',
-      stagger: 0.2,
+      x: othersX,
       ease: 'power4.out',
       delay:0.1,
-      opacity:0,
-      scale:0
+      duration:1,
+      opacity:0
     })
   }
-})
+}
 
+
+next.addEventListener('click', ()=> slide('-100vw','100%'))
+next.addEventListener('wheel', ()=> slide('-100vw','100%'))
+prev.addEventListener('click', ()=> slide('100vw','-100%'))
+prev.addEventListener('wheel', ()=> slide('100vw','-100%'))
 
 
