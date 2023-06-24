@@ -51,5 +51,5 @@ main > div > div > div > button{
 }
 
 .image {
-  @apply block w-full h-full
+  @apply block w-full h-full object-cover
 }

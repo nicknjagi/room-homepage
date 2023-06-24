@@ -900,6 +900,8 @@ main > div > div > div > button {
   display: block;
   height: 100%;
   width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 
 @media (min-width: 480px) {
